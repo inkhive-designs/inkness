@@ -12,12 +12,12 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area col-md-8">
+	<div id="primary" class="content-area <?php do_action('inkness_primary-width') ?>">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'page' ); ?>
+				<?php get_template_part( 'modules/content/content', 'page' ); ?>
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template
@@ -31,5 +31,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
-<?php get_sidebar('footer'); ?>
 <?php get_footer(); ?>

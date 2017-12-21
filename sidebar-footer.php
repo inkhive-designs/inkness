@@ -1,28 +1,39 @@
 <?php
-/**
- * The Sidebar containing the main widget areas.
- *
- * @package Inkness
+/*
+ * The Footer Widget Area
+ * @package inkness
  */
-?>
-	<div id="footer-sidebar" class="widget-area col-md-12" role="complementary">
-		<?php do_action( 'before_sidebar' ); ?>
-		<?php if ( is_active_sidebar( 'sidebar-2' ) ) { ?>
-		<div class="footer-column col-md-4"> <?php
-			dynamic_sidebar( 'sidebar-2'); 
-		?> </div> <?php	
-		}
-			
-		if ( is_active_sidebar( 'sidebar-3' ) ) { ?>
-		<div class="footer-column col-md-4"> <?php
-			dynamic_sidebar( 'sidebar-3'); 
-		?> </div> <?php	
-		}
+ ?>
+ </div><!--.mega-container-->
 
-		if ( is_active_sidebar( 'sidebar-4' ) ) { ?>
-		<div class="footer-column col-md-4"> <?php
-			dynamic_sidebar( 'sidebar-4'); 
-		?> </div> <?php	
-		}
-		?>	 	
-	</div><!-- #secondary -->
+<?php if (!is_home() && is_front_page()) :
+    get_template_part('modules/hero/hero-bottom');
+endif;
+?>
+
+ <?php if ( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active_sidebar('footer-3') ) : ?>
+	 <div id="footer-sidebar" class="widget-area">
+	 	<div class="container">
+		 	<?php 
+				if ( is_active_sidebar( 'footer-1' ) ) : ?>
+					<div class="footer-column col-md-4 col-sm-4"> 
+						<?php dynamic_sidebar( 'footer-1'); ?> 
+					</div> 
+				<?php endif;
+					
+				if ( is_active_sidebar( 'footer-2' ) ) : ?>
+					<div class="footer-column col-md-4 col-sm-4"> 
+						<?php dynamic_sidebar( 'footer-2'); ?> 
+					</div> 
+				<?php endif;
+		
+				if ( is_active_sidebar( 'footer-3' ) ) : ?>
+					<div class="footer-column col-md-4 col-sm-4"> <?php
+						dynamic_sidebar( 'footer-3'); ?> 
+					</div>
+				<?php endif; ?>
+				
+				
+	 	</div>
+	 </div>	<!--#footer-sidebar-->	
+<?php endif; ?>

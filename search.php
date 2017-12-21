@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area col-md-8">
+	<section id="primary" class="content-area  <?php do_action('inkness_primary-width') ?>">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -19,7 +19,12 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'search' ); ?>
+                <?php
+                /**
+                 * Run the loop for the search to output the results.
+                 */
+                do_action('inkness_blog_layout');
+                ?>
 
 			<?php endwhile; ?>
 
@@ -27,7 +32,7 @@ get_header(); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'no-results', 'search' ); ?>
+            <?php get_template_part( '/modules/content/content', 'none' ); ?>
 
 		<?php endif; ?>
 
@@ -35,5 +40,4 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php get_sidebar(); ?>
-<?php get_sidebar('footer'); ?>
 <?php get_footer(); ?>

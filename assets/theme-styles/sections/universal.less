@@ -1,0 +1,183 @@
+.font {
+  font-family: "Open Sans",  sans-serif;
+}
+.font-heading {
+  font-family: "Open Sans",  sans-serif;
+}
+.font-title {
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+body {
+  .font;
+  background: #f7f7f7;
+}
+#main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container {
+  margin: auto;
+}
+code {
+  white-space: pre-wrap !important;
+  background: #f7f7f7;
+}
+.navbar-default .navbar-nav>li>a {
+  color: none;
+  &:hover {
+    color: none;
+  }
+}
+
+
+
+#parallax-bg {
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+#page {
+  position: relative;
+  z-index: 888;
+}
+#page ::selection {
+  background: @link-color;
+  color: white;
+}
+
+
+/* 4. Links
+------------------------------------------------------- */
+
+a {
+  color: @link-color;
+}
+a:hover,
+a:focus,
+a:active {
+  color: @link-hover-color;
+}
+
+/* 5. Carousel Wrapper
+------------------------------------------------------- */
+
+#carousel-wrapper {
+  margin-bottom: 55px;
+  .bx-wrapper {
+    .bx-next {
+      margin-right: 10px;
+    }
+    .bx-viewport {
+      box-shadow: none;
+      ul {
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+
+
+
+
+/* 7. Content
+------------------------------------------------------- */
+
+#content {
+  margin-top: 30px;
+  padding-top: 30px;
+}
+
+#primary {
+  padding: 0;
+}
+.byline {
+  display: inline;
+}
+.single {
+  .fa-clock-o:before ,.fa-user:before {
+    color: @link-color !important;
+  }
+}
+
+.blog, .search, body.archive {
+  .entry-title {
+    .font-heading;
+    padding-bottom: 0px;
+    display: block;
+  }
+}
+
+.tag .entry-meta {
+  border-bottom: none;
+}
+.cat-page-title {
+  margin: 20px 0px !important;
+}
+
+
+/* 9. HTML Markup & Formatting
+--------------------------------------------------- */
+article {
+  table {
+    background: #f7f7f7;
+    td {
+      padding: 5px;
+      border: solid 1px #eee;
+    }
+    th {
+      padding: 5px;
+      background: #ccc;
+      border: solid 1px #ccc;
+    }
+    thead {
+
+    }
+  }
+  h1,h2,h3,h4,h5,h6 {
+    color: darken(@sidebar-link-color,25%);
+  }
+  blockquote {
+    .font-heading;
+  }
+  code {
+    background: desaturate(@link-color, 20%);
+    color: darken(@link-color,50%);
+  }
+}
+
+/* 11. Widgets Style
+---------------------------------------------------- */
+
+.rp-item {
+  display: block;
+  clear: both;
+  overflow: auto;
+  margin-bottom: 8px;
+  border-bottom: solid 1px @default-background;
+  padding-bottom: 5px;
+}
+.rp-item:before {
+  content: none !important;
+}
+.rp-thumb {
+  float: left;
+  width: 64px;
+  margin-right: -5px;
+  margin-top: 3px;
+  img {
+    width: 48px;
+    border: solid 2px #eee;
+    border-radius: 2px;
+  }
+  rp-title {
+    clear: none;
+    a {
+      display: block;
+    }
+  }
+}

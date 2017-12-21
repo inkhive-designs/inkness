@@ -1,0 +1,124 @@
+/* 7.2 Secondary 
+------------------------------------------------------- */
+
+#secondary, #footer-sidebar {
+  padding: 0px 10px;
+  ul {
+    list-style: none;
+    margin-left: 5px;
+    li:before {
+      margin-right: 5px;
+      content:"\f0da";
+      font-family: "FontAwesome";
+      color: @sidebar-link-color;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    ul {
+      li:before {
+        content: "\f111";
+        font-size: 5px;
+        position: relative;
+        top: -3px;
+      }
+      margin-left: 15px;
+      ul {
+        margin-left: 5px;
+
+      }
+    }
+  }
+  .widget_recent_entries {
+    li:before {
+      content: "\f0f6";
+    }
+    li {
+      border-bottom: solid 1px @default-background;
+      padding: 5px 0px;
+    }
+  }
+  .widget_recent_comments {
+    li:before {
+      content: "\f075";
+      font-size: 12px;
+      position: relative;
+      top: -2px;
+    }
+  }
+  .widget_calendar {
+    caption {
+      font-weight: bold;
+      margin-bottom: 7px;
+    }
+    table {
+      padding: 5px;
+      text-align:center;
+      background: #fff;
+    }
+    thead {
+      border-bottom: solid 1px @link-hover-color;
+      th {
+        background: #ddd;
+        padding: 5px;
+        text-align: center;
+      }
+    }
+    tr td {
+      padding: 8px;
+      background: #eee;
+      margin: 4px;
+      text-align: center;
+    }
+    #prev {
+      text-align: left;
+    }
+    #next {
+      text-align: right;
+    }
+  }
+  h1.widget-title {
+    font-size: 25px;
+    font-weight: normal;
+    border-bottom: solid 4px lighten(@sidebar-link-color,25%);
+    padding: 5px;
+    margin-top: 0px;
+    color: @link-color;
+    .font-heading;
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+  .widget_search {
+    label {
+      width: 100%;
+    }
+    form {
+      width: 100%;
+      padding: 10px 5px;
+    }
+    input[type=submit] {
+      display: none;
+    }
+    input[type=text] {
+      display: block;
+      min-width: 96%;
+      margin-left: 20px;
+    }
+  }
+  select#cat {
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  .widget {
+    background: #fff;
+    padding-top: 0px;
+    padding: 10px;
+    border: solid 1px #eee;
+    a {
+      color: @sidebar-link-color;
+    }
+  }
+  .widget > div {
+    padding: 7px;
+  }
+}

@@ -1,0 +1,34 @@
+/* 12. Comments
+---------------------------------------------------------- */
+
+#respond {
+  input[type=text] {
+    max-width: 450px;
+  }
+}
+
+#comments {
+  ol.comment-list {
+    list-style: none;
+  }
+  li.comment {
+    border: solid 1px #eee;
+    padding: 10px;
+    margin-top: 15px;
+    list-style: none;
+    background: #f9f9f9;
+  }
+  .vcard img {
+    border: solid 4px @menu-bar-bg;
+    border-radius: 5px;
+    margin: 0 10px 10px 0;
+  }
+  .comment-metadata {
+    font-weight: bold;
+  }
+}
+@media screen and (max-width:480px) {
+  li.comment {
+    margin-left: -5%;
+  }
+}

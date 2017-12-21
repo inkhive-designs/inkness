@@ -7,27 +7,25 @@
  * @package Inkness
  */
 ?>
-	</div>
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer row" role="contentinfo">
+<?php get_sidebar('footer'); ?>
+
+
+<footer id="colophon" class="site-footer row" role="contentinfo">
 	<div class="container">
-	<?php if ( of_get_option('credit1', true) == 0 ) { ?>
-		<div class="site-info col-md-4">
-			<?php do_action( 'inkness_credits' ); ?>
-			<?php printf( __( 'Inkness Theme by %1$s.', 'inkness' ), '<a href="http://inkhive.com/" rel="designer">InkHive</a>' ); ?>
-		</div><!-- .site-info -->
-	<?php } ?>	
-		<div id="footertext" class="col-md-7">
-        	<?php
-			if ( (function_exists( 'of_get_option' ) && (of_get_option('footertext2', true) != 1) ) ) {
-			 	echo of_get_option('footertext2', true); } ?>
+		<div class="site-info container col-md-12">
+            <?php printf( __( 'Theme Designed by %1$s.', 'inkness' ), '<a href="'.esc_url("http://inkhive.com/").'" rel="nofollow">InkHive</a>' ); ?>
+            <div class="clearfix"></div>
+            <?php echo ( get_theme_mod('inkness_footer_text') == '' ) ? ('&copy; '.date_i18n( __( 'Y', 'inkness' ) ).' '.get_bloginfo('name').__('. All Rights Reserved. ','inkness')) : esc_html(get_theme_mod('inkness_footer_text')); ?>
         </div>
 	</div>   
 	</footer><!-- #colophon -->
 	
 </div><!-- #page -->
 
+
 <?php wp_footer(); ?>
+
 </body>
 </html>

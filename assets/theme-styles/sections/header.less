@@ -1,0 +1,171 @@
+/* 2. Header-top
+------------------------------------------------------- */
+#header-top {
+  background: @header-top-bg;
+  padding-top: 10px;
+}
+#masthead {
+
+}
+.site-branding {
+  float: left;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-top: -24px;
+}
+.site-title {
+  .font-heading;
+  position: relative;
+  a {
+    color: @link-color;
+    font-size: 29px;
+    font-weight: 200;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.site-description {
+  .font-title;
+  color: darken(#DADADA,15%);
+  font-size: 16px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.main_logo {
+  max-width: 590px;
+}
+@media screen and (max-width: 400px) {
+  .main_logo {
+    max-width: 320px;
+  }
+}
+#social-icons {
+  float: right;
+  text-align: right;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  a {
+    padding: 5px;
+    width: 32px;
+    height: 32px;
+
+  }
+}
+
+
+/* 3. header-2
+------------------------------------------------------- */
+#header-2 {
+  padding-top: 15px;
+  width: 100%;
+  background: #FFF;
+}
+#top-search {
+  float: right;
+  position: relative;
+  top: 3px;
+  z-index: 999;
+  margin-bottom: 15px;
+
+  input[type=text] {
+    background: #fff;
+    outline: none;
+    border: solid 1px #eee;
+    width: 280px;
+    padding-right: 30px;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    .font-heading;
+    font-weight: lighter;
+    &:hover,&:focus {
+      background: #ddd;
+    }
+  }
+  ::-webkit-input-placeholder {
+    color: darken(@link-color,10%);
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: darken(@link-color,10%);
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: darken(@link-color,10%);
+  }
+
+  :-ms-input-placeholder {
+    color: darken(@link-color,10%);
+  }
+  button {
+    position: relative;
+    padding: 2px 5px;
+    background: none;
+    border: none;
+    -webkit-linear-gradient: none;
+    top: -2px;
+    box-shadow: none;
+    left: -33px;
+    color: darken(@link-color,15%);
+  }
+  .search-form {
+    /* width: inherit; */
+    float: right;
+  }
+}
+
+/* 13. Header Fixes for Responsive Part
+ -------------------------------------------------------------- */
+
+@media screen and (max-width: 767px) {
+  #top-search {
+    text-align: center;
+    margin-top: 10px;
+  }
+  #top-search .search-form {
+    float: none;
+  }
+  h1.site-title, #social-icons {
+    display: block;
+    text-align: center;
+    padding: 5px;
+  }
+  #top-bar {
+    padding-bottom: 5px;
+  }
+  div.slide-description {
+    display: none;
+  }
+  div.slide-title {
+    font-size: 12px;
+  }
+  .nivo-caption {
+    max-width: 400px;
+    max-width: 75%;
+    min-width: 200px;
+  }
+  #site-navigation ul.menu, #site--navigation div.menu {
+    display: none;
+    li {
+      a {
+        font-size: 14px;
+        padding: 10px;
+      }
+      &:hover a {
+        border-bottom: none;
+        padding-bottom: 25px;
+        padding: 10px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  #top-search input[type=text] {
+    width: 250px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #site-navigation ul.menu {
+    display: block;
+  }
+}

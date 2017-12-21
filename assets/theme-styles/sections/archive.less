@@ -1,0 +1,36 @@
+article.archive {
+
+  .article-rest {
+    margin: auto;
+  }
+}
+
+.archive {
+  .entry-title a {
+    display: block;
+    font-size: 26px;
+    color: darken(@link-color,80%);
+    color: @link-color;
+    .font-heading;
+    &:hover {
+      color: @link-hover-color;
+    }
+  }
+  .entry-meta {
+    font-size: small;
+    color: @link-color;
+    /* border-bottom: solid 6px lighten(@sidebar-link-color,25%); */
+    padding-bottom: 15px;
+    color: @sidebar-link-color;
+    a {
+      color: @sidebar-link-color;
+    }
+    .posted-on {
+      margin-right: 6px;
+    }
+  }
+  .entry-header {
+    padding: 0 15px;
+    margin-bottom: -30px;
+  }
+}
