@@ -60,6 +60,7 @@ if ( ! function_exists( 'inkness_setup' ) ) :
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus( array(
             'primary' => __( 'Primary Menu', 'inkness' ),
+            'mobile' => __( 'Mobile Menu', 'inkness' ),
         ) );
 
         /*
@@ -81,7 +82,7 @@ if ( ! function_exists( 'inkness_setup' ) ) :
         add_image_size('inkness-featpost-thumb',542, 542, true );
         add_image_size('inkness-thumb',670, 430, true );
         add_image_size('inkness-slider-thumb',910, 430, true );
-        add_image_size('homepage-banner',750,450,true);
+        add_image_size('homepage-banner',450,450,true);
     }
 endif; // inkness_setup
 add_action( 'after_setup_theme', 'inkness_setup' );

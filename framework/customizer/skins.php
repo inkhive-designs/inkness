@@ -30,7 +30,7 @@ function inkness_customize_register_skins( $wp_customize ) {
 	);
 	
 	function inkness_sanitize_skin( $input ) {
-		if ( in_array($input, array('default','orange','green', 'brown') ) )
+		if ( in_array($input, array('default','green', 'yellow') ) )
 			return $input;
 		else
 			return '';

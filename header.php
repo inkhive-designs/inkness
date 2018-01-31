@@ -14,9 +14,14 @@
 	<div id="header-top">
         <?php get_template_part('modules/header/masthead'); ?>
     </div>
-	
-	<div id="header-2">
-		<div class="container">
+
+
+    <div id="header-2">
+        <div class="mobile-menu">
+            <?php get_template_part('modules/navigation/mobile', 'menu'); ?>
+        </div>
+
+        <div class="container">
             <?php get_template_part('modules/navigation/menu'); ?>
 
 		  

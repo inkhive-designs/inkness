@@ -23,7 +23,7 @@ function inkness_customize_register_layouts($wp_customize) {
     );
 
     function inkness_sanitize_blog_layout( $input ) {
-        if ( in_array($input, array('grid','grid_2_column','grid_3_column','inkness') ) )
+        if ( in_array($input, array('grid','grid_2_column','inkness') ) )
             return $input;
         else
             return '';
@@ -39,8 +39,6 @@ function inkness_customize_register_layouts($wp_customize) {
                 'inkness' => __('Inkness Theme Layout','inkness'),
                 'grid' => __('Basic Blog Layout','inkness'),
                 'grid_2_column' => __('Grid - 2 Column','inkness'),
-                'grid_3_column' => __('Grid - 3 Column','inkness'),
-
             )
         )
     );
