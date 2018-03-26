@@ -2,7 +2,7 @@
 function inkness_scripts() {
     wp_enqueue_style( 'inkness-style', get_stylesheet_uri() );
 
-    wp_enqueue_style('inkness-title-font', '//fonts.googleapis.com/css?family='.str_replace(" ", "+", esc_html(get_theme_mod('inkness_title_font', 'Raleway')) ).':100,300,400,700' );
+    wp_enqueue_style('inkness-title-font', '//fonts.googleapis.com/css?family='.str_replace(" ", "+", esc_html(get_theme_mod('inkness_title_font', 'Open Sans')) ).':100,300,400,700' );
 
     wp_enqueue_style('inkness-body-font', '//fonts.googleapis.com/css?family='.str_replace(" ", "+", esc_html(get_theme_mod('inkness_body_font', 'Khula') ) ).':100,300,400,700' );
 

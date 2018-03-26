@@ -15,7 +15,7 @@ function inkness_customize_register_googlefonts($wp_customize){
     $wp_customize->add_setting(
         'inkness_title_font',
         array(
-            'default'=> 'HIND',
+            'default'=> 'Open Sans',
             'sanitize_callback' => 'inkness_sanitize_gfont'
         )
     );
@@ -39,7 +39,7 @@ function inkness_customize_register_googlefonts($wp_customize){
 
     $wp_customize->add_setting(
         'inkness_body_font',
-        array(	'default'=> 'Open Sans',
+        array(	'default'=> 'Khula',
             'sanitize_callback' => 'inkness_sanitize_gfont' )
     );
 

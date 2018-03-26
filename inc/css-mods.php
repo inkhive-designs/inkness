@@ -10,9 +10,16 @@ function inkness_custom_css_mods() {
 	//Check Jetpack is active
 	if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) )
 		$custom_css .= '.pagination { display: none; }';
-	
-	
-	if ( !display_header_text() ) :
+
+    if ( get_theme_mod('inkness_title_font') ) :
+        $custom_css .= ".title-font, h1, h2, .sections-title { font-family: ".esc_html(get_theme_mod('inkness_title_font','Open Sans'))."; }";
+    endif;
+
+    if ( get_theme_mod('inkness_body_font') ) :
+        $custom_css .= "body, h2.site-description { font-family: ".esc_html( get_theme_mod('inkness_body_font','Khula') )."; }";
+    endif;
+
+    if ( !display_header_text() ) :
 		$custom_css .= "#masthead .site-branding #text-title-desc { display: none; }";
 	endif;
 
