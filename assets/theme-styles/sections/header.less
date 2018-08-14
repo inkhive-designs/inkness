@@ -15,6 +15,7 @@
 }
 .site-title {
   position: relative;
+  display: inline-block;
   a {
     color: @link-color;
     font-size: 29px;
@@ -31,13 +32,13 @@
   font-weight: 100;
   text-transform: uppercase;
 }
-.main_logo {
-  max-width: 590px;
-}
-@media screen and (max-width: 400px) {
-  .main_logo {
-    max-width: 320px;
-  }
+#site-logo {
+	display: inline-block;
+	margin: 10px auto;
+	img {
+		width: auto;
+		max-height: 100px;
+	}
 }
 #social-icons {
   float: right;

@@ -50,7 +50,10 @@ if ( ! function_exists( 'inkness_setup' ) ) :
         add_theme_support( 'post-thumbnails' );
 
         //Custom Logo
-        add_theme_support( 'custom-logo' );
+        add_theme_support( 'custom-logo', array(
+	        								'height'	=> 100,
+	        								'width'		=> 250,
+        ) );
 
 
         //RT Slider Support

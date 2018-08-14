@@ -6,7 +6,5 @@ function inkness_customize_register_header($wp_customize) {
         'title' => __('Header Settings', 'inkness'),
         'priority'  => 20
     ));
-
-    $wp_customize->remove_control('custom_logo');
 }
 add_action('customize_register', 'inkness_customize_register_header');
